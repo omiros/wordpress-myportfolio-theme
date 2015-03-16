@@ -1,0 +1,330 @@
+@import "reset.scss";
+
+// Definings
+@import "_variables.scss";
+
+// Global Styles
+@import "_globals.scss";
+/*
+Theme Name: My Portfolio Theme
+Theme URI: http://www.eliastahmazidis.com
+Author: Elias Tahmazidis
+Author URI: http://www.eliastahmazidis.com/
+Description: Portfolio dynamic WordPress theme
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: myportfoliotheme
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+body {
+	.navbar {
+		border-radius: 0px;
+	}
+	font-family: 'Roboto', sans-serif;
+	a {
+		color: $white;
+		&:hover {
+			color: #eee;
+		}
+	}
+	h1 {
+		font-size: 4.34em;
+		color: $white;
+		font-weight: 600;
+	}
+	h2 {
+		color: $white;
+		font-size: 3.064em;
+		font-weight: 600;
+	}
+	p{
+		color: #ABA9A9;
+		font-size: 1.064em;
+		line-height: 1.6em;
+	}
+	.featured-image img {
+		// width: 100%;
+	}
+}
+/*.admin-bar .navbar-fixed-top {
+	margin-top: 30px;
+}*/
+
+/* ABOUT ELIAS */
+.page-id-17 {
+
+	.about-page {
+		background:#fff;
+		overflow: hidden;
+	}
+	p {
+		padding: 5px 10px;
+		text-align: left;
+	}
+	.widget {
+		margin: 115px 0 30px;
+	}
+	figure {
+		img {
+			padding:5px;
+			width: 100%;
+		}
+	}
+}
+.content {
+	padding: 20px;
+	text-align: left;
+	line-height: 2.8em;
+	h2 {
+
+	}
+}
+.about-footer {
+	background: $secondary-color;
+	.box-1 {
+		background: #ED9808;
+	}
+	.box-2 {
+		background: #41BA9C;
+		margin-left: -30px;
+	}
+	.box-3 {
+		background: $secondary-color;
+	}
+}
+.box {
+	color: #fff;
+	position: relative;
+	height: 100px;
+	h2 {
+		text-align: center;
+		padding-top: 10%;
+	}	
+	&.box:after {
+		position:absolute;
+		opacity:0;
+		transition: all 0.5s;
+		-webkit-transition: all 0.5s;
+	}
+	&.box:before {
+		position:absolute;
+		opacity:0;
+		transition: all 0.5s;
+		-webkit-transition: all 0.5s;
+	}
+	&.box:after {
+	    content: "";
+	    width:100%; 
+	    height:100%;
+	    top:0; left:0;
+	    background:rgba(0,0,0,0.7);
+	}
+	&.box:before {
+	    content: attr(data-content);
+	    width:100%;
+	    color:#fff;
+	    margin-top: 5%;
+	    font-size: 28px;
+	    z-index:1;
+	    padding:4px 10px;
+	    text-align:center;
+	    box-sizing:border-box;
+	    -moz-box-sizing:border-box;
+	}
+	&.box:hover:after,
+	  {
+		opacity:1;
+	}
+	&.box:hover:before{
+		opacity:1;
+	}
+}
+.likes {
+	background: #fff;
+	color: #161616;
+	padding: 10px 0;
+	height: 130px;
+	>h2 {
+		text-align: left;
+		border-bottom: 1px solid #000;
+		padding: 10px
+	}
+	li {
+		float: left;
+		display: block;
+		padding: 20px;
+	}
+}
+
+/* BLOG */
+
+.blog {
+	.sidebar {
+		padding: 5px 20px;
+		margin-top: 118px;
+		right: -50px;
+	}
+	.carousel {
+		max-width: 850px;
+		.carousel-caption {
+			font-size: 2.034em;
+		}
+	}
+	.pro-lang {
+		color: #ABA9A9;
+	}
+}
+
+@media (min-width:768px) {
+	.sub-menu {
+		display: none;
+		position: absolute;
+		background: #222;
+		padding: 10px 15px;
+		width: 200px;		
+	}
+
+	li:hover .sub-menu {
+		display: block;
+	}
+
+}
+.sub-menu li {
+	margin-bottom: 10px;
+	list-style: none;
+}
+
+.sub-menu li:last-child {
+	margin-bottom: 0;
+}
+
+.sub-menu a  {
+	color: #999;
+	text-decoration: none;
+}
+
+.sub-menu a:hover  {
+	color: #fff;	
+}	
+
+.current-menu-item > a, .current-menu-parent > a {
+	background: #000;	
+}
+.current-menu-parent li a {
+	background: inherit;
+}
+.current-menu-parent .current-menu-item a {
+	color: #fff;
+	font-weight: bold;
+}
+/*
+Sidebar
+*/
+.sidebar {
+	background: #eee;
+	color: #444;
+	padding: 5px 25px;
+	margin-top: 40px;
+}
+.sidebar h3 {
+	color: #888;
+}
+.widget {
+	margin: 10px 0 30px;
+}
+/*
+Article post class
+*/
+article.post {
+	margin: 20px 0 40px;
+}
+.single-post {
+	.featured-image {
+		img {
+			width: 100%;
+		}
+	}
+}
+/*
+Portfolio
+*/
+.portfolio-piece img,
+.portfolio-image img,
+.featured-image {
+	max-width: 100%;
+}
+@media (max-width: 540px) {
+
+	.portfolio-piece h4 {
+		font-size: .8em;
+	}
+	.prev-next {
+	font-size: 10px;
+	margin-top: 20px;
+	text-align: right;
+	}
+}
+/*
+prev-next buttons
+*/
+.prev-next {
+	font-size: 24px;
+	margin-top: 30px;
+	text-align: right;
+}
+/*
+ * Off Canvas
+ * --------------------------------------------------
+ */
+@media screen and (max-width: 767px) {
+  .row-offcanvas {
+    position: relative;
+    -webkit-transition: all .25s ease-out;
+         -o-transition: all .25s ease-out;
+            transition: all .25s ease-out;
+  }
+
+  .row-offcanvas-right {
+    right: 0;
+  }
+
+  .row-offcanvas-left {
+    left: 0;
+  }
+
+  .row-offcanvas-right
+  .sidebar-offcanvas {
+    right: -50%; /* 6 columns */
+  }
+
+  .row-offcanvas-left
+  .sidebar-offcanvas {
+    left: -50%; /* 6 columns */
+  }
+
+  .row-offcanvas-right.active {
+    right: 50%; /* 6 columns */
+  }
+
+  .row-offcanvas-left.active {
+    left: 50%; /* 6 columns */
+  }
+
+  .sidebar-offcanvas {
+    position: absolute;
+    top: 0;
+    width: 50%; /* 6 columns */
+  }
+}
+.taxonomies {
+	font-size: 90%;
+	margin-bottom: 2rem;
+}
+.taxonomies a {
+	font-weight: 600;
+}
+
+

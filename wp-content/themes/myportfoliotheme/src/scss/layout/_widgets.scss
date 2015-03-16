@@ -1,0 +1,77 @@
+/* WIDGETS */
+#widgets {
+    background: $secondary-color;
+    color: #fff;
+    @media screen and (max-width: 1080px) {
+            display: none;
+        }
+    .post-plugin {
+        ul {
+            margin-left: -3rem;
+        }
+    }
+}
+
+.widget {
+    padding: 15px 40px;
+    @media screen and (max-width: 480px) {
+            padding: 9px 80px;
+        }
+    .btn {
+        color: #fff;
+        background: $primary-color;
+        border-color: $primary-color;
+        padding: 30px 10px;
+        font-size: 13px;
+        line-height: 1.33;
+        border-radius: 100%;
+        margin-left: 15%;
+        &:hover {
+            background: #fff;
+            color: $secondary-color;
+        }
+    }
+    h3 {
+        font-size: 1.8625em;
+        padding-bottom: 10px;
+        @media screen and (max-width: 480px) {
+            font-size: 1.4625em;
+        }
+    } 
+        h3:before {
+            width: 12px;
+            height: 12px;
+            background: $primary-color;
+            display: inline-block;
+            content: ".";
+            margin-right: 10px;
+            text-indent: -12px;
+            overflow: hidden;
+            border-radius: 12px;
+        }
+    ul{
+        list-style: none;
+        a{
+            font-size:1.4375em;
+            color: #fff;
+            text-decoration: none;
+            margin: 0 0 0 5rem;
+            line-height: 1.6em;
+            @media screen and (max-width: 480px) {
+            font-size: 1.075em;
+            }
+        }
+        .badge {
+            display: inline-block;
+            min-width: 20px;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 1;
+            color: $white;
+            text-align: center;
+            white-space: nowrap;
+            vertical-align: baseline;
+            background-color: $primary-color;
+        }
+    }
+}

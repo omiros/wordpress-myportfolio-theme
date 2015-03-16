@@ -1,0 +1,24 @@
+// Colors
+$primary-color: #489d8a;
+$secondary-color: #161616;
+$white: #fff;
+$darker-green: #2f5b4c;
+$opacity: .5;
+
+// Sizes
+$margin-bottom: 40px;
+
+// Nav Mixins
+@mixin nav-webkit{
+ -webkit-transition: -webkit-transform 0.2s ease-in-out;
+ -moz-transition: -moz-transform 0.2s ease-in-out;
+ -ms-transition: -ms-transform 0.2s ease-in-out;
+ -o-transition: -o-transform 0.2s ease-in-out;
+ transition: -webkit-transform 0.2s ease-in-out;
+}
+@mixin webkit-transition {
+	-webkit-transition-duration: 0.8s;
+    -moz-transition-duration: 0.8s;
+    -o-transition-duration: 0.8s;
+    transition-duration: 0.8s;
+}

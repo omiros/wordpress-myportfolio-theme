@@ -1,0 +1,166 @@
+/* ABOUT ME */
+
+#about-me {
+    background: #fff;
+	text-align: left;
+    figure {
+        img {
+            position: absolute;
+            width: auto;
+            @media screen and (max-width: 1000px) {
+                position: relative;
+                width: 70%;
+                padding-top: 50px;
+            }
+            @media screen and (max-width: 700px) {
+                width: 90%;
+            }
+            @media screen and (max-width: 769px) {
+                display: none;
+            }
+        }
+        .hidden-img {
+            display: none;
+            @media screen and (max-width:759px) {
+                display: block;
+                width: auto;
+            }
+        }
+    }
+    .text {
+        padding: 2rem 2rem 4rem 2rem;
+        @media screen and (max-width:759px) {
+            padding: 0;
+        }
+    }
+    .about-me-text {
+        color: $secondary-color;
+        padding: 40px 0 15px 55px;
+        z-index: 100;
+        left: -600;
+        .g_hi {
+            font-size: 6.5em;
+            line-height: 1em;
+            display: block;
+            font-weight: 700;
+            @include nav-webkit;
+            &:hover {
+                @include webkit-transition;
+                -webkit-transform: scale(1.2);
+            }
+        }
+        .g_my {
+            font-size: 3.8125em;
+            line-height: .85em;
+            display: block;
+            @include nav-webkit;
+            &:hover {
+                @include webkit-transition;
+                -webkit-transform: scale(1.2);
+            }
+        }
+        .g_go {
+            font-size: 8.375em;
+            line-height: 1em;
+            display: block;
+            font-weight: 700;
+            color: $primary-color;
+            @include nav-webkit;
+            &:hover {
+                @include webkit-transition;
+                -webkit-transform: scale(1.2);
+            }
+        }
+        .g_ca {
+            font-size: 4.5em;
+            display: inline-block;
+            font-weight: 700;
+            color: $primary-color;
+            line-height: 1.1em;
+            @include nav-webkit;
+            &:hover {
+                @include webkit-transition;
+                -webkit-transform: scale(1.2);
+            }
+        }
+        .g_an {
+            font-size: 3.1875em;
+            display: inline-block;
+            margin-left: .3141em;
+            margin-right: -10px;
+            @include nav-webkit;
+            &:hover {
+                @include webkit-transition;
+                -webkit-transform: scale(1.2);
+            }
+        }
+        .g_fr {
+            font-size: 2.375em;
+            display: block;
+            line-height: 1.12em;
+            font-weight: 700;
+            color: $primary-color;
+            margin-bottom: 7px;
+            @include nav-webkit;
+            &:hover {
+                @include webkit-transition;
+                -webkit-transform: scale(1.2);
+            }
+        }
+        .g_ni {
+            display: block;
+            font-size: 4.1em;
+            line-height: 1em;
+            white-space: nowrap;
+            @include nav-webkit;
+            &:hover {
+                @include webkit-transition;
+                -webkit-transform: scale(1.2);
+            }
+        }
+         @media screen and (max-width:999px) {
+            padding-left: 0px;
+            .text {
+                margin-left: 80px;
+                width: 100%;
+            }
+            .g_ni {
+                font-size: 2.1em;
+            }
+            .g_go {
+            font-size: 4.375em;
+            display: inline-block;
+            }
+            .g_ca {
+                font-size: 2.5em;
+            }
+            .g_hi {
+                font-size: 4.5em;
+            }
+            .g_fr {
+                text-align: left;
+            }
+        }
+        @media screen and (max-width:479px) {
+            padding-left: 0px;
+            .text {
+                margin-left: 80px;
+            }
+            .g_ni {
+                font-size: 2.1em;
+            }
+            .g_go {
+            font-size: 4.375em;
+            }
+            .g_ca {
+                font-size: 2.5em;
+            }
+            .g_hi {
+                font-size: 4.5em;
+            }
+            .g_an {
+                margin-left: 0;
+            }
+        }
+    }
+}

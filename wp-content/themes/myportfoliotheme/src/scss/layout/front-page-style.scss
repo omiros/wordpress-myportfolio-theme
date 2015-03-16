@@ -1,0 +1,49 @@
+@import "../reset.scss";
+
+// Definings
+@import "../_variables.scss";
+
+// Global Styles
+@import "../_globals.scss";
+
+// Page Specifics
+@import "_about_me.scss";
+@import "_portfolio.scss";
+@import "_skills.scss";
+@import "_contact.scss";
+@import "_insta_gallery.scss";
+@import "_widgets.scss";
+@import "_nav.scss";
+
+//Buttons
+@import "_buttons.scss";
+
+.modal-dialog {
+    margin: 60px auto;
+}
+// #wpadminbar {
+// 	margin-top: 35px;
+// }
+.item {
+    display: block;
+    width: 23%;
+    height: 1px;
+    content: "";
+    background: #ccc;
+}
+.section-title {
+    margin-top: .25em;
+    margin-bottom: 1.5em;
+    font-weight: bold;
+    font-size: 2.5em;
+    line-height: 1.2em;
+}
+.container {
+    padding: 0;
+    width: 100%;
+    overflow: hidden;
+}
+
+
+
+

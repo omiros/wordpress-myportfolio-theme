@@ -1,0 +1,112 @@
+/* ADDING STYLE TO MAIN WRAPPER */
+nav.sm-menu{
+    background: $secondary-color;
+    color: #fff;
+    height: 57px;
+    width: 100%;
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    font-family: arial;
+}
+/* ADDING STYLE TO TRIGGER BUTTON */
+.nav-trigger{
+    font-size: 36px;
+    padding: 5px 10px;
+    float: left;
+    background: #fff;
+    cursor: pointer;
+}
+.nav-trigger:hover{
+    background: $secondary-color;
+}
+.nav-trigger i:hover{ color: #fff;}
+.nav-trigger i{
+    padding: 5px;
+    color: $secondary-color;
+ @include nav-webkit;
+}
+input[type=checkbox]:checked + nav.sm-menu .nav-trigger i{
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    transform: rotate(90deg); 
+}
+/* STYLE TO LIST */
+nav.sm-menu ul{
+    display: inline-block;
+    position: relative;
+    left: -100%;
+    -webkit-transition: left 0.5s ease-in-out;
+    -moz-transition: left 0.5s ease-in-out;
+    -ms-transition: left 0.5s ease-in-out;
+    -o-transition: left 0.5s ease-in-out;
+    transition: left 0.5s ease-in-out;
+    @media screen and (max-width: 479px) {
+        display: flex;
+    }
+}
+/* STYLE TO LIST ITEMS */
+nav.sm-menu li{
+    display: block;
+    float: left;
+}
+/* STYLE TO LINKS */
+nav.sm-menu li a{
+     color: #c1c1c1;
+     height: 50px;
+     font-size: 24px;
+     margin-top: 1px;
+     line-height: 60px;
+     text-align: center;
+     display: block;
+     padding: 5px 20px;
+     text-decoration: none;
+     @media screen and (max-width:479px) {
+        padding: 5px 5px;
+     }
+}
+nav.sm-menu li a:hover{
+    color: #fff;
+}
+nav.sm-menu li a i{
+    font-size: 36px;
+}
+nav.sm-menu li a span{
+     position: absolute;
+     left: 100%;
+     top: 0;
+     width:100%;
+     padding: 5px 20px;
+     height: 100%;
+     font-size: 24px;
+     text-align: left;
+     line-height: 55px;
+     text-transform: capitalize;
+     opacity: 0;
+     visibility: hidden;
+     -webkit-transition: opacity 0.2s ease, visibility 0.2s ease;
+     -moz-transition: opacity 0.2s ease, visibility 0.2s ease;
+     -ms-transition: opacity 0.2s ease, visibility 0.2s ease;
+     -o-transition: opacity 0.2s ease, visibility 0.2s ease;
+     transition: opacity 0.2s ease, visibility 0.2s ease; 
+}
+nav.sm-menu li a:hover span{
+    opacity: 1;
+    visibility: visible;
+}
+/* SENDING INPUT CHECKBOX OUT OF BROWESER WINDOW */
+input[type=checkbox]{
+    position: absolute;
+    top: -99px;
+}
+/* SENDS THE MENU TO -100% LEFT */
+nav.sm-menu ul{
+    left: -100%;
+}
+/* BRINGS BACK THE ICONS MENU WHEN INPOUT IS CHECKED */
+input[type=checkbox]:checked + nav.sm-menu ul {
+    left: 0;
+}

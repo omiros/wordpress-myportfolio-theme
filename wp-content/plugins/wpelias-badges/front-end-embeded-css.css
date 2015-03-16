@@ -1,0 +1,20 @@
+<style type="text/css">
+	
+	.wptreehouse-badge {
+		position: relative;
+	}
+
+	.wptreehouse-badge-info { 
+		display: none;
+		background: rgba(255,255,255,.9);
+		padding: 5px 10px;
+	}
+
+	.wptreehouse-badge:hover .wptreehouse-badge-info{
+		display: block;
+		position: absolute;				
+		top: 0 ;
+		right: 0;		
+	}
+	
+</style>

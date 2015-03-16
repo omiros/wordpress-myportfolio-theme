@@ -1,0 +1,93 @@
+/*  INSTAGRAM-API : Banner */
+#insta-slider {
+    padding-top: 55px;
+}
+#insta-slider img {
+    float: left;
+}
+#insta-slider img.small {
+    width: 20%;
+}
+#insta-slider img.big {
+    width: 40%;
+    float: left;
+}
+#insta-slider img.medium {
+    width: 20%;
+    margin-top: -20%;
+}
+@media screen and (max-width: 479px) {
+    #insta-slider{ height: 160px; }
+}
+.slide {
+    // opacity: 0;
+}
+
+/* LOGO */
+
+#logo {
+    // img {
+    //     display: block;
+    //     margin: 15% 30%;
+    //     width: 40%;
+    //     position: absolute;
+    //     z-index: 999;
+    //     @media screen and (max-width: 479px) {
+    //         margin-top: -25%;
+    //     }
+    // }
+    background: $secondary-color;
+    position: relative;
+    width: 45%;
+    height: 200px;
+    margin: 0 auto;
+    padding: 1rem;
+    top: 150px;
+    opacity: .9;
+    @media screen and (max-width: 1000px) {
+        top: 100px;
+        height: 180px;
+    }
+    @media screen and (max-width: 945px) {
+        top: 80px;
+        height: 150px;
+    }
+    @media screen and (max-width: 645px) {
+        display: none;
+    }
+    h2 {
+        color: #fff;
+        font-weight: 200;
+        z-index: 999;
+        padding: 2rem 4rem;
+        opacity: 1;
+        position: absolute;
+        span {
+            font-size: 0.54em;
+            margin-left: 4rem;
+            @media screen and (max-width: 945px) {
+                // display: none;
+            }
+        }
+        @media screen and (min-width: 1900px) {
+            font-size: 2em 15rem;
+        }
+        @media screen and (min-width: 1500px) {
+            padding: 2rem 10rem;
+        }
+        @media screen and (max-width: 1200px) {
+            font-size: 2.6em;
+        }
+        @media screen and (max-width: 1080px) {
+            font-size: 2.1em;
+        }
+        @media screen and (max-width: 945px) {
+            font-size: 1.8em;
+            padding: 2rem 3rem;
+        }
+        @media screen and (max-width: 725px) {
+            padding: 2rem 2rem;
+        }
+    }
+}
+
